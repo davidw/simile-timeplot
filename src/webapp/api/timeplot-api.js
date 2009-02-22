@@ -28,7 +28,7 @@
             while (node != null) {
                 if (node.nodeType == 1 && node.tagName.toLowerCase() == "script") {
                     var url = node.src;
-                    if (url.indexOf("timeplot-api") >= 0) {
+                    if (url.indexOf("big") >= 0) {
                         local = (url.indexOf("local") >= 0);
                     }
                 }
@@ -84,7 +84,7 @@
                 SimileAjax.parseURLParameters(Timeplot_parameters, Timeplot.params, paramTypes);
             }
         } else {
-            var url = SimileAjax.findScript(document, "/timeplot-api.js");
+            var url = SimileAjax.findScript(document, "big.js");
             if (url == null) {
                 Timeplot.error = new Error("Failed to derive URL prefix for Simile Timeplot API code files");
                 return;
