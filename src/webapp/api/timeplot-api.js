@@ -89,8 +89,7 @@
                 Timeplot.error = new Error("Failed to derive URL prefix for Simile Timeplot API code files");
                 return;
             }
-            Timeplot.urlPrefix = url.substr(0, url.indexOf("timeplot-api.js"));
-        
+            Timeplot.urlPrefix = url.substr(0, url.indexOf("REPLACEME-REPLACEME.js"));
             SimileAjax.parseURLParameters(url, Timeplot.params, paramTypes);
         }
 
